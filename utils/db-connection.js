@@ -22,9 +22,9 @@ return;
     }
     console.log("table is created");
 });
-/*
+
 // table 1
-const createQuery1= `CREATE TABLE Users (
+const createQuery1= `CREATE TABLE IF NOT EXISTS Users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE)`
@@ -39,7 +39,7 @@ return;
 
 // table 2
 
-const createQuery2= `CREATE TABLE Buses (
+const createQuery2= `CREATE TABLE IF NOT EXISTS Buses (
     id INT AUTO_INCREMENT PRIMARY KEY,
     busNumber VARCHAR(50) NOT NULL,
     totalSeats INT NOT NULL,
@@ -51,7 +51,8 @@ connection.end();
 return;
     }
     console.log("table 2 is created");
-});// table 3
+});
+/*// table 3
 const createQuery3= `CREATE TABLE Bookings (
     id INT AUTO_INCREMENT PRIMARY KEY,
     seatNumber INT NOT NULL
